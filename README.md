@@ -1,66 +1,171 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# CollabTask
 
-## About Laravel
+Gerencie tarefas de forma colaborativa com boards compartilhados, listas personalizáveis e progresso visual.
+Ideal para times, grupos de estudo ou qualquer projeto em equipe.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Logo](https://img.freepik.com/vetores-premium/pessoas-ou-modelo-de-design-de-logotipo-de-icone-de-cuidado-de-trabalho_412311-3886.jpg?w=360)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Licença
 
-## Learning Laravel
+[MIT](https://choosealicense.com/licenses/mit/)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Apêndice
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+CollabTask é uma plataforma de gerenciamento de tarefas em equipe, inspirada no conceito de boards Kanban. Nele, usuários podem criar projetos, convidar pessoas, organizar tarefas em listas (como “A fazer”, “Em progresso”, “Concluído”) e acompanhar o andamento em tempo real.
+Além disso, há comentários nas tarefas, sistema de notificações e controle de permissões.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Funcionalidades
 
-### Premium Partners
+ Login com Auth0;
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+ Criação de múltiplos projetos;
 
-## Contributing
+ Boards com listas e tarefas;
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ Arrastar e soltar tarefas;
 
-## Code of Conduct
+ Comentários nas tarefas;
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+ Notificações em tempo real com WebSocket;
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Stack utilizada
 
-## License
+Backend: PHP com Laravel;
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Frontend: HTML, CSS, JavaScript;
+
+Containerização: Docker;
+
+Banco de Dados: MySQL (via Docker);
+
+Autenticação: Laravel Sanctum;
+
+Estilo: CSS puro ou com pré-processador (como SASS, opcional);
+
+Deploy/Dev Environment: Docker Compose (para orquestração de containers);
+## Instalação
+
+Clone o projeto
+
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/collabtask.git
+cd collabtask
+Instale as dependências
+
+bash
+Copiar
+Editar
+cd frontend
+npm install
+cd ../backend
+npm install
+
+
+Configure os arquivos .env
+
+env
+Copiar
+Editar
+
+# .env (backend)
+MONGO_URI=...
+AUTH0_DOMAIN=...
+AUTH0_CLIENT_ID=...
+
+Rode os servidores
+
+bash
+Copiar
+Editar
+# Backend
+cd backend
+npm run dev
+
+# Frontend
+cd ../frontend
+npm run dev
+## Deploy
+
+📦 Opção 1: Deploy com Docker em um servidor VPS
+Pré-requisitos:
+
+Servidor Linux com Docker e Docker Compose instalados
+
+Acesso via SSH
+
+Clone o repositório no servidor:
+
+bash
+Copiar
+Editar
+git clone (https://github.com/seu-usuario/collabtask.git)
+cd collabtask
+Configure variáveis de ambiente no arquivo .env
+
+Execute o Docker Compose:
+
+bash
+Copiar
+Editar
+docker-compose up -d --build
+Acesse pelo navegador:
+
+(http://seu-ip-ou-dominio)
+
+☁️ Opção 2: Deploy com Laravel Forge ou Ploi (sem Docker)
+Se preferir, você pode fazer deploy manual com serviços como Laravel Forge ou Ploi.io, que facilitam a configuração de servidores otimizados para Laravel.
+
+🧪 Ambiente de Desenvolvimento Local
+Você também pode rodar o projeto localmente com Docker:
+
+bash
+Copiar
+Editar
+docker-compose up -d --build
+Isso sobe o app Laravel, o MySQL e o PHPMyAdmin em containers separados.
+
+## Autores
+
+- [João Gabriel](https://github.com/GabrielJTech)
+
+- [Ana Vitória](https://github.com/anavitoria17)
+
+- [Samuel Chaves](https://github.com/samuelchavezs)
+## Aprendizados
+
+Este projeto nos ensinou muito sobre:
+
+Comunicação em tempo real com WebSockets
+
+Organização de componentes reutilizáveis com Next.js
+
+Boas práticas com MongoDB e Mongoose
+
+UX em drag-and-drop com React Beautiful DnD
+
+Fluxo de autenticação segura com Auth0
+
+
+## Contribuindo
+
+Contribuindo 
+Tem ideias ou melhorias? Faça parte!
+
+Fork o repositório
+
+Crie uma branch: git checkout -b nova-ideia
+
+Faça suas alterações
+
+Envie com um Pull Request
+
+Vamos revisar e publicar juntos 🚀
+
+
